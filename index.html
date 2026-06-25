@@ -3,224 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Mahadi Hasan | Portfolio</title>
-
+    <title>Md Mahadi Hasan | Undergraduate Portfolio</title>
     <style>
-        :root {
-            --primary: #1e3a5f;
-            --secondary: #0f766e;
-            --background: #f8fafc;
-            --card: #ffffff;
-            --text: #1e293b;
-            --border: #e2e8f0;
-        }
-
+        /* CSS Reset & Variables */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-page: #f8fafc;        /* Soft Off-white preventing eye strain */
+            --bg-card: #ffffff;        /* Clean white for content blocks */
+            --primary: #0f172a;        /* Deep Navy Blue for high authority headers */
+            --secondary: #0d9488;      /* Subtle Teal accent color for links/badges */
+            --text-main: #1e293b;      /* Premium Dark Charcoal for maximum readability */
+            --text-muted: #475569;     /* Slate gray for secondary details */
+            --border-color: #e2e8f0;   /* Light gray border line */
         }
 
         body {
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.7;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
+        .portfolio-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+            border: 1px solid var(--border-color);
         }
 
+        /* Header Section */
         header {
-            background: linear-gradient(135deg, var(--primary), #2b4d73);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.95;
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
 
+        .contact-item a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* Section Layout */
         section {
-            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        section:last-of-type {
+            margin-bottom: 20px;
         }
 
         h2 {
             color: var(--primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin-bottom: 20px;
-            border-left: 5px solid var(--secondary);
             padding-left: 12px;
+            border-left: 4px solid var(--secondary);
         }
 
-        .card {
-            background: var(--card);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border: 1px solid var(--border);
+        .intro-text {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            text-align: justify;
         }
 
-        .education-item {
-            margin-bottom: 25px;
+        /* Timeline / Education Block */
+        .education-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .education-item h3 {
+        .edu-card {
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .edu-title {
+            font-size: 1.15rem;
+            font-weight: 600;
             color: var(--primary);
         }
 
-        .skills {
+        .edu-year {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--secondary);
+            background-color: #f0fdfa;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .edu-institution {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .edu-grade {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Skills Pill Layout */
+        .skills-container {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
 
-        .skill {
-            background: rgba(15,118,110,0.1);
+        .skill-badge {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-badge.highlight {
+            background-color: #f0fdfa;
             color: var(--secondary);
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-weight: 600;
+            border-color: #ccfbf1;
         }
 
-        .contact p {
-            margin: 10px 0;
-        }
-
-        a {
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
+        /* Footer */
         footer {
-            background: var(--primary);
-            color: white;
             text-align: center;
-            padding: 25px;
             margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
+        /* Responsive Optimization */
+        @media (max-width: 600px) {
+            body { padding: 15px 10px; }
+            .portfolio-container { padding: 25px 20px; }
+            .edu-header { flex-direction: column; gap: 4px; }
+            header h1 { font-size: 1.9rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
+    <div class="portfolio-container">
+        <header>
             <h1>Md Mahadi Hasan</h1>
-            <p>BBA Student | Future Business Professional | Technology Enthusiast</p>
-        </div>
-    </header>
-
-    <section>
-        <div class="container">
-            <h2>Introduction</h2>
-            <div class="card">
-                <p>
-                    Welcome to my portfolio. I am <strong>Md Mahadi Hasan</strong>, a dedicated and motivated
-                    Business Administration student with a strong academic background and a growing interest in
-                    business strategy, management, technology, and professional development. I am currently pursuing
-                    my Bachelor of Business Administration (BBA) at Green University of Bangladesh, where I have
-                    maintained solid academic performance. Alongside my studies, I continuously develop practical
-                    computer skills and communication abilities to prepare myself for the modern business environment.
-                    My goal is to combine business knowledge with technology-driven solutions to create meaningful
-                    value in the corporate world.
-                </p>
+            <div class="contact-grid">
+                <div class="contact-item">📍 Dhaka, Bangladesh</div>
+                <div class="contact-item">📞 <a href="tel:01834445731">01834445731</a></div>
+                <div class="contact-item">✉️ <a href="mailto:mahadihasansiam018@gmail.com">mahadihasansiam018@gmail.com</a></div>
+                <div class="contact-item">🌐 <a href="https://www.facebook.com/share/1BFu4uXJK2/" target="_blank" rel="noopener">Facebook Profile</a></div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section>
-        <div class="container">
-            <h2>Education</h2>
-            <div class="card">
+        <section id="about">
+            <h2>Executive Summary</h2>
+            <p class="intro-text">
+                An ambitious and analytically-driven Business Administration undergraduate at Green University of Bangladesh, maintaining a strong academic record with a first-semester CGPA of 3.67. Possesses a proven foundation of excellence from secondary and higher secondary achievements, paired with essential workplace technical skills and professional linguistic proficiency. Eager to bridge theoretical corporate strategies with modern data-driven solutions to foster operational leadership.
+            </p>
+        </section>
 
-                <div class="education-item">
-                    <h3>Green University of Bangladesh</h3>
-                    <p><strong>Program:</strong> Bachelor of Business Administration (BBA)</p>
-                    <p><strong>Status:</strong> Second Semester Student</p>
-                    <p><strong>First Semester CGPA:</strong> 3.67 / 4.00</p>
+        <section id="education">
+            <h2>Academic Profile</h2>
+            <div class="education-timeline">
+                
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <span class="edu-title">Bachelor of Business Administration (BBA)</span>
+                        <span class="edu-year">2nd Semester — Ongoing</span>
+                    </div>
+                    <div class="edu-institution">Green University of Bangladesh</div>
+                    <div class="edu-grade">Current Result: CGPA 3.67 (1st Semester)</div>
                 </div>
 
-                <div class="education-item">
-                    <h3>Dr. Mahbubur Rahman Mollah College</h3>
-                    <p><strong>Higher Secondary Certificate (HSC)</strong></p>
-                    <p><strong>Result:</strong> GPA 5.00</p>
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <span class="edu-title">Higher Secondary Certificate (HSC)</span>
+                        <span class="edu-year">Graduated</span>
+                    </div>
+                    <div class="edu-institution">Dr. Mahbubur Rahman Mollah College</div>
+                    <div class="edu-grade">Result: GPA 5.00</div>
                 </div>
 
-                <div class="education-item">
-                    <h3>Milestone College</h3>
-                    <p><strong>Secondary School Certificate (SSC)</strong></p>
-                    <p><strong>Result:</strong> GPA 5.00</p>
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <span class="edu-title">Secondary School Certificate (SSC)</span>
+                        <span class="edu-year">Graduated</span>
+                    </div>
+                    <div class="edu-institution">Milestone College</div>
+                    <div class="edu-grade">Result: GPA 5.00</div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="card">
-                <div class="skills">
-                    <span class="skill">Microsoft Word</span>
-                    <span class="skill">Microsoft Excel</span>
-                    <span class="skill">Business Communication</span>
-                    <span class="skill">English Proficiency</span>
-                    <span class="skill">Computer Literacy</span>
-                    <span class="skill">Data Organization</span>
-                    <span class="skill">Problem Solving</span>
-                    <span class="skill">Team Collaboration</span>
-                </div>
+        <section id="skills">
+            <h2>Skills & Core Competencies</h2>
+            <div class="skills-container">
+                <div class="skill-badge highlight">Microsoft Excel (Data & Analytics)</div>
+                <div class="skill-badge highlight">Microsoft Word (Documentation)</div>
+                <div class="skill-badge">English Language Proficiency</div>
+                <div class="skill-badge">Corporate Communication</div>
+                <div class="skill-badge">Analytical Reasoning</div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <h2>Contact Information</h2>
-            <div class="card contact">
-                <p><strong>Phone:</strong> 01834445731</p>
-                <p><strong>Email:</strong>
-                    <a href="mailto:mahadihasansiam018@gmail.com">
-                        mahadihasansiam018@gmail.com
-                    </a>
-                </p>
-
-                <p><strong>Facebook:</strong>
-                    <a href="https://www.facebook.com/share/1BFu4uXJK2/" target="_blank">
-                        Visit My Facebook Profile
-                    </a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Md Mahadi Hasan. All Rights Reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Md Mahadi Hasan. All rights reserved. Hosted via GitHub Pages.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
