@@ -3,220 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Mahadi Hasan - Professional Portfolio</title>
+    <title>Md Mahadi Hasan | Portfolio</title>
+
     <style>
         :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2b6cb0;
-            --text-color: #2d3748;
-            --bg-color: #f7fafc;
+            --primary: #1e3a5f;
+            --secondary: #0f766e;
+            --background: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --border: #e2e8f0;
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
         }
 
         header {
+            background: linear-gradient(135deg, var(--primary), #2b4d73);
+            color: white;
             text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            padding: 80px 20px;
         }
 
         header h1 {
-            color: var(--primary-color);
-            margin: 0 0 10px 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 0.95rem;
-        }
-
-        .contact-info a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
         }
 
         section {
-            margin-bottom: 35px;
+            padding: 60px 0;
         }
 
         h2 {
-            color: var(--primary-color);
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 10px;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        p.intro {
-            font-size: 1.1rem;
-            text-align: justify;
-        }
-
-        .edu-item {
+            color: var(--primary);
             margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed #e2e8f0;
+            border-left: 5px solid var(--secondary);
+            padding-left: 12px;
         }
 
-        .edu-item:last-child {
-            border-bottom: none;
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
         }
 
-        .edu-header {
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .education-item h3 {
+            color: var(--primary);
+        }
+
+        .skills {
             display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            color: var(--primary-color);
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
-        .edu-details {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.95rem;
-            color: #4a5568;
+        .skill {
+            background: rgba(15,118,110,0.1);
+            color: var(--secondary);
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-weight: 600;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+        .contact p {
+            margin: 10px 0;
         }
 
-        .skill-category {
-            background: #edf2f7;
-            padding: 15px;
-            border-radius: 6px;
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
         }
 
-        .skill-category h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.1rem;
-            color: var(--secondary-color);
-        }
-
-        .skill-category ul {
-            margin: 0;
-            padding-left: 20px;
+        a:hover {
+            text-decoration: underline;
         }
 
         footer {
+            background: var(--primary);
+            color: white;
             text-align: center;
-            margin-top: 40px;
-            font-size: 0.85rem;
-            color: #718096;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 20px;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
+    <header>
+        <div class="container">
             <h1>Md Mahadi Hasan</h1>
-            <div class="contact-info">
-                <span>📍 Dhaka, Bangladesh</span> | 
-                <span>📞 <a href="tel:01834445731">01834445731</a></span> | 
-                <span>✉️ <a href="mailto:mahadihasansiam018@gmail.com">mahadihasansiam018@gmail.com</a></span> | 
-                <span>🌐 <a href="https://www.facebook.com/share/1BFu4uXJK2/" target="_blank">Facebook Profile</a></span>
+            <p>BBA Student | Future Business Professional | Technology Enthusiast</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p>
+                    Welcome to my portfolio. I am <strong>Md Mahadi Hasan</strong>, a dedicated and motivated
+                    Business Administration student with a strong academic background and a growing interest in
+                    business strategy, management, technology, and professional development. I am currently pursuing
+                    my Bachelor of Business Administration (BBA) at Green University of Bangladesh, where I have
+                    maintained solid academic performance. Alongside my studies, I continuously develop practical
+                    computer skills and communication abilities to prepare myself for the modern business environment.
+                    My goal is to combine business knowledge with technology-driven solutions to create meaningful
+                    value in the corporate world.
+                </p>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <section id="introduction">
-            <h2>Executive Summary</h2>
-            <p class="intro">
-                A highly motivated and academically driven Business Administration undergraduate with a strong foundation in management principles and analytical thinking. Demonstrating a consistent track record of academic excellence from secondary education through to university, backed by practical digital literacy and strong communication skills. Passionate about leveraging business strategies and corporate frameworks to drive impactful organizational growth.
-            </p>
-        </section>
-
-        <section id="education">
+    <section>
+        <div class="container">
             <h2>Education</h2>
-            
-            <div class="edu-item">
-                <div class="edu-header">
-                    <span>Bachelor of Business Administration (BBA)</span>
-                    <span>Ongoing</span>
+            <div class="card">
+
+                <div class="education-item">
+                    <h3>Green University of Bangladesh</h3>
+                    <p><strong>Program:</strong> Bachelor of Business Administration (BBA)</p>
+                    <p><strong>Status:</strong> Second Semester Student</p>
+                    <p><strong>First Semester CGPA:</strong> 3.67 / 4.00</p>
                 </div>
-                <div class="edu-details">
-                    <span>Green University of Bangladesh</span>
-                    <span><strong>CGPA: 3.67</strong> (1st Semester)</span>
+
+                <div class="education-item">
+                    <h3>Dr. Mahbubur Rahman Mollah College</h3>
+                    <p><strong>Higher Secondary Certificate (HSC)</strong></p>
+                    <p><strong>Result:</strong> GPA 5.00</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Milestone College</h3>
+                    <p><strong>Secondary School Certificate (SSC)</strong></p>
+                    <p><strong>Result:</strong> GPA 5.00</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="card">
+                <div class="skills">
+                    <span class="skill">Microsoft Word</span>
+                    <span class="skill">Microsoft Excel</span>
+                    <span class="skill">Business Communication</span>
+                    <span class="skill">English Proficiency</span>
+                    <span class="skill">Computer Literacy</span>
+                    <span class="skill">Data Organization</span>
+                    <span class="skill">Problem Solving</span>
+                    <span class="skill">Team Collaboration</span>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="edu-item">
-                <div class="edu-header">
-                    <span>Higher Secondary Certificate (HSC)</span>
-                    <span>Completed</span>
-                </div>
-                <div class="edu-details">
-                    <span>Dr. Mahbubur Rahman Mollah College</span>
-                    <span><strong>GPA: 5.00</strong></span>
-                </div>
+    <section>
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="card contact">
+                <p><strong>Phone:</strong> 01834445731</p>
+                <p><strong>Email:</strong>
+                    <a href="mailto:mahadihasansiam018@gmail.com">
+                        mahadihasansiam018@gmail.com
+                    </a>
+                </p>
+
+                <p><strong>Facebook:</strong>
+                    <a href="https://www.facebook.com/share/1BFu4uXJK2/" target="_blank">
+                        Visit My Facebook Profile
+                    </a>
+                </p>
             </div>
+        </div>
+    </section>
 
-            <div class="edu-item">
-                <div class="edu-header">
-                    <span>Secondary School Certificate (SSC)</span>
-                    <span>Completed</span>
-                </div>
-                <div class="edu-details">
-                    <span>Milestone College</span>
-                    <span><strong>GPA: 5.00</strong></span>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills & Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Computer & Tech Skills</h3>
-                    <ul>
-                        <li>Microsoft Word</li>
-                        <li>Microsoft Excel</li>
-                        <li>Data Organization</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Language & Soft Skills</h3>
-                    <ul>
-                        <li>Proficient in English</li>
-                        <li>Effective Communication</li>
-                        <li>Team Collaboration</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Md Mahadi Hasan. Generated for GitHub Pages.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2026 Md Mahadi Hasan. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
